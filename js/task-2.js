@@ -10,7 +10,7 @@ if (dailyCcals.length === 0) {
   for (let i = 0; i < dailyCcals.length; i++) {
     totalCcal += dailyCcals[i];
   }
-  return averageCalories = totalCcal / dailyCcals.length;
+  return totalCcal / dailyCcals.length;
 }
 }
 // Other Option
