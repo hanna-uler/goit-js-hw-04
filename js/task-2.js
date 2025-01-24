@@ -1,28 +1,31 @@
 function calcAverageCalories(days) {
-  if (days.length === 0) {
-    return 0;
-  } else {
-    let totalCcal = 0;
-    for (let i = 0; i < days.length; i++) {
-        const oneDayCcalCount = days[i].calories;
-        totalCcal += oneDayCcalCount
-    }
-  return totalCcal / days.length;
+  const dailyCcals = [];
+  for (const day of days) {
+    dailyCcals.push(day.calories);
   }
+if (dailyCcals.length === 0) {
+  return 0;
+} else {
+  let totalCcal = 0;
+  for (let i = 0; i < dailyCcals.length; i++) {
+    totalCcal += dailyCcals[i];
+  }
+  return averageCalories = totalCcal / dailyCcals.length;
 }
-
+}
+// Other Option
 // function calcAverageCalories(days) {
-//   let dailyCcals = [];
-//   for (const day of days) {
-//     dailyCcals.push(day.calories);
-//   }
-//   let totalCcal = 0;
-//   for (let i = 0; i < dailyCcals.length; i++) {
-//     totalCcal += dailyCcals[i];
-//   }
+//   if (days.length === 0) {
+//     return 0;
+//   } else {
+//     let totalCcal = 0;
+//     for (let i = 0; i < days.length; i++) {
+//         const oneDayCcalCount = days[i].calories;
+//         totalCcal += oneDayCcalCount
+//     }
 //   return totalCcal / days.length;
+//   }
 // }
-
 console.log(
   calcAverageCalories([
     { day: "monday", calories: 3010 },
