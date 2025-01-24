@@ -1,22 +1,27 @@
 function calcAverageCalories(days) {
+  if (days.length === 0) {
+    return 0;
+  } else {
     let totalCcal = 0;
     for (let i = 0; i < days.length; i++) {
-        const oneDayCcalCount = days[i].?calories-HowToGetIt?;
+        const oneDayCcalCount = days[i].calories;
         totalCcal += oneDayCcalCount
     }
-    return totalCcal / days.length;
+  return totalCcal / days.length;
+  }
 }
 
-// Напиши функцію calcAverageCalories(days), 
-// яка повертає середньодобове значення кількості калорій, 
-// які спортсмен споживав протягом тижня. Функція очікує один параметр: 
-// days — масив обєктів. Кожен обєкт описує день тижня та 
-// кількість калорій calories, спожитих спортсменом, у цей день. 
-// Візьми код нижче і встав після оголошення своєї функції 
-// для перевірки коректності її роботи. У консоль будуть виведені результати її викликів.
-
-
-
+// function calcAverageCalories(days) {
+//   let dailyCcals = [];
+//   for (const day of days) {
+//     dailyCcals.push(day.calories);
+//   }
+//   let totalCcal = 0;
+//   for (let i = 0; i < dailyCcals.length; i++) {
+//     totalCcal += dailyCcals[i];
+//   }
+//   return totalCcal / days.length;
+// }
 
 console.log(
   calcAverageCalories([
